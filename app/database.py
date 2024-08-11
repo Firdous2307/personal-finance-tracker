@@ -1,4 +1,5 @@
 import sqlite3
+from transaction import Transaction
 
 class Database:
     def __init__(self):

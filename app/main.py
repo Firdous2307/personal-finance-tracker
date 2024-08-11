@@ -1,4 +1,5 @@
 import sys
+from transaction import Transaction
 from database import Database
 
 def main_menu():
@@ -9,11 +10,11 @@ def main_menu():
     return input("Choose an option: ")
 
 def add_transaction(db):
-    amount = float(input("Enter amount: "))
-    category = input("Enter category: ")
-    description = input("Enter description: ")
-    transaction_type = input("Enter type (income/expense): ").lower()
-
+    # Example values for testing
+    amount = 100.50
+    category = "Groceries"
+    description = "Weekly grocery shopping"
+    transaction_type = "expense"
     # Creating a Transaction object to represent the transaction
     transaction = Transaction(amount, category, description, transaction_type)
 

@@ -7,5 +7,6 @@ class Transaction:
         self.date = date
 
 
+   
     def __str__(self):
-        return f"{self.date}: 
+        return f"{self.date}: {self.type.capitalize()} - ${self.amount:.2f} - {self.category} - {self.description}"
