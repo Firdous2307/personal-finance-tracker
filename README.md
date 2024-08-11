@@ -33,3 +33,30 @@ So, creating a custom database module ensures that your database management is p
 
 
 It follows the 4 principles of OOP(Object Oriented Programming)
+
+
+## SQL Lite
+
+
+
+Using an SQLite database for this project is advantageous because:
+
+**Simplicity**: SQLite is lightweight and easy to set up, making it ideal for small to medium-sized projects without the need for complex database configurations.
+
+**Embedded**: SQLite is a serverless database, meaning it runs in-process with your application. This eliminates the need for a separate database server and simplifies deployment.
+
+**File-Based Storage**: It stores data in a single file, which is convenient for a personal finance tracker where data management needs are straightforward.
+
+**Zero Configuration**: SQLite requires minimal configuration, allowing you to focus more on developing your application rather than managing database settings.
+
+
+[SQL Lite Docs](https://www.sqlite.org/docs.html)
+
+
+[SQLite3](https://docs.python.org/3/library/sqlite3.html#module-sqlite3)
+
+
+
+The Database class in my code is responsible for managing the connection to an SQLite database and performing operations like creating tables, adding transactions, and retrieving data.
+
+The import statement **from transaction import Transaction** is used to work with the Transaction class, likely representing individual financial transactions.
