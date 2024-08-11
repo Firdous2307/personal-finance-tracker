@@ -11,15 +11,17 @@ def main_menu():
 
 def add_transaction(db):
     # Example values for testing
-    amount = 100.50
-    category = "Groceries"
-    description = "Weekly grocery shopping"
+    amount = 200.50
+    category = "Car Expenses"
+    description = "Monthly car testing"
     transaction_type = "expense"
     # Creating a Transaction object to represent the transaction
     transaction = Transaction(amount, category, description, transaction_type)
 
     db.add_transaction(transaction)
     print("Transaction added successfully!")
+
+
 
 def main():
     db = Database()
