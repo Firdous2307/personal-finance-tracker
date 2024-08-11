@@ -1,5 +1,6 @@
 import sys
 from transaction import Transaction
+from database import Database
 
 def main_menu():
     print("\nPersonal Finance Tracker")
