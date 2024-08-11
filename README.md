@@ -71,6 +71,9 @@ The **create_table** method creates a table named **transactions** in the SQLite
 
 Well, I thought I had this created already, cause when i was running the python command for the main.py and checking the database using SQLite CLI, it was empty i.e the **finance_tracker.db**. So let us go ahead in creating a **transaction.py** file.
 
+This file defines the Transaction class, which represents a financial transaction with attributes for amount, category, description, type, and date. The __init__ method initializes these attributes, while the __str__ method provides a formatted string representation of the transaction.
+
+
 
 ## Using SQLite Command Line Interface
 
