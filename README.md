@@ -60,3 +60,52 @@ Using an SQLite database for this project is advantageous because:
 The Database class in my code is responsible for managing the connection to an SQLite database and performing operations like creating tables, adding transactions, and retrieving data.
 
 The import statement **from transaction import Transaction** is used to work with the Transaction class, likely representing individual financial transactions.
+
+
+
+## Adding a New Table
+
+The **create_table** method creates a table named **transactions** in the SQLite database if it doesn't already exist. It defines columns for transaction details such as amount, category, description, type, and a date with a default timestamp. After executing the SQL command, it commits the changes to ensure the table is created.
+
+## Creating a Transaction Python File
+
+Well, I thought I had this created already, cause when i was running the python command for the main.py and checking the database using SQLite CLI, it was empty i.e the **finance_tracker.db**. So let us go ahead in creating a **transaction.py** file.
+
+
+## Using SQLite Command Line Interface
+
+Open your terminal or command prompt and start the SQLite command line tool with:
+```
+bash
+sqlite3 finance_tracker.db
+```
+
+Check Tables:
+
+List all tables in the database with:
+```
+sql
+.tables
+```
+View Table Schema:
+
+Check the schema of the transactions table with:
+```
+sql
+.schema transactions
+```
+
+Query Data:
+
+If you want to view all records from a specific table:
+```
+sql
+SELECT * FROM table_name;
+```
+Exit SQLite:
+
+Exit the SQLite command line tool with:
+```
+sql
+.exit
+```
