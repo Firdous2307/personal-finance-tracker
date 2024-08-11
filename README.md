@@ -117,3 +117,7 @@ sql
 Pictures and texts will be implemented later for the Adding Transactions.
 
 ## Viewing Transactions
+
+After adding more transactions to the database, I  need to view and analyze these transactions to ensure the data is being recorded accurately.
+
+This can involve querying the database to retrieve and display transaction records, allowing me to verify that each transaction was stored correctly and to review details such as amount, category, and type.

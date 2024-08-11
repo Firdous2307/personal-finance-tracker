@@ -10,18 +10,16 @@ def main_menu():
     return input("Choose an option: ")
 
 def add_transaction(db):
-    # Example values for testing
-    amount = 300.50
-    category = "Tuition Fees"
-    description = "Daily Tuition Payment "
-    transaction_type = "expense"
+    amount = float(input("Enter amount: "))
+    category = input("Enter category: ")
+    description = input("Enter description: ")
+    transaction_type = input("Enter type (income/expense): ").lower()
+
     # Creating a Transaction object to represent the transaction
     transaction = Transaction(amount, category, description, transaction_type)
 
     db.add_transaction(transaction)
     print("Transaction added successfully!")
-
-
 
 def main():
     db = Database()
