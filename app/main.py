@@ -11,9 +11,9 @@ def main_menu():
 
 def add_transaction(db):
     # Example values for testing
-    amount = 200.50
-    category = "Car Expenses"
-    description = "Monthly car testing"
+    amount = 300.50
+    category = "Tuition Fees"
+    description = "Daily Tuition Payment "
     transaction_type = "expense"
     # Creating a Transaction object to represent the transaction
     transaction = Transaction(amount, category, description, transaction_type)
