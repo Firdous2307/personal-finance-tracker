@@ -112,3 +112,8 @@ Exit the SQLite command line tool with:
 sql
 .exit
 ```
+
+
+Pictures and texts will be implemented later for the Adding Transactions.
+
+## Viewing Transactions
