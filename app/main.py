@@ -8,5 +8,11 @@ def main_menu():
     print("3. Exit")
     return input("Choose an option: ")
 
+def add_transaction():
+    amount = float(input("Enter amount: "))
+    category = input("Enter category: ")
+
+
+
 if __name__ == "__main__":
     main_menu()
