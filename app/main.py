@@ -35,7 +35,10 @@ def main():
         if choice == '1':
             add_transaction(db)
         elif choice == '2':
-            view_transactions(db)    
+            view_transactions(db)  
+        elif choice == '3':
+            print("Thank you for using Personal Finance Tracker!")
+            sys.exit(0)      
         else:
             print("Invalid choice. Please try again.")        
 

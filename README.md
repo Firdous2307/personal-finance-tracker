@@ -126,3 +126,8 @@ After adding more transactions to the database, I  need to view and analyze thes
 
 This can involve querying the database to retrieve and display transaction records, allowing me to verify that each transaction was stored correctly and to review details such as amount, category, and type.
 
+Okay, so when i ran the python command to run the **main.py** and viewed the transactions, I got a list of the transactions made alongside datestamps
+
+Oh, also forgot to add exit option in **main.py**
+
+!Pictures Later
