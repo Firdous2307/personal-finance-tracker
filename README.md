@@ -131,3 +131,10 @@ Okay, so when i ran the python command to run the **main.py** and viewed the tra
 Oh, also forgot to add exit option in **main.py**
 
 !Pictures Later
+
+
+
+
+## Generating Reports
+
+With the ability to add and view transactions, generating reports is important for understanding spending habits and managing finances. Reports help users see where their money is going, track income, and make better financial choices by turning data into useful insights.
