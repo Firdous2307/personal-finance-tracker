@@ -21,6 +21,12 @@ def add_transaction(db):
     db.add_transaction(transaction)
     print("Transaction added successfully!")
 
+
+def view_transactions(db):
+    transactions = db.get_all_transactions()
+    for transaction in transactions:
+        print(transaction)    
+
 def main():
     db = Database()
 
@@ -28,6 +34,8 @@ def main():
         choice = main_menu()
         if choice == '1':
             add_transaction(db)
+        elif choice == '2':
+            view_transactions(db)    
         else:
             print("Invalid choice. Please try again.")        
 
