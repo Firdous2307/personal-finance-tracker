@@ -26,7 +26,13 @@ class Database:
             INSERT INTO transactions (amount, category, description, type)
             VALUES (?, ?, ?, ?)
         ''', (transaction.amount, transaction.category, transaction.description, transaction.type))
-        self.conn.commit()    
+        self.conn.commit()   
+
+    def get_all_transactions(self):
+        cursor = self.conn.cursor()
+        cursor.execute('SELECT * FROM transactions')
+        rows = cursor.fetchall()
+        return [Transaction(*row[1:5], row[5]) for row in rows]     
 
     def __del__(self):
         self.conn.close()
