@@ -34,6 +34,10 @@ So, creating a custom database module ensures that your database management is p
 
 It follows the 4 principles of OOP(Object Oriented Programming)
 
+A good resource about [The Four Pillars of Object-Oriented Programming](https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/)
+
+Although the language used was in JavaScript, the principle still remains the same.
+
 
 ## SQL Lite
 
