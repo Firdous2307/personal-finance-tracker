@@ -184,7 +184,9 @@ The `manage_budget` function provides an interface for users to manage their bud
 
 Unfortunately, when i ran the main.py, it showed an error(picture later), now i am thinking why this?. Everything is already in place 
 
-Oh forgot to define the variable budget in the main function
+Oh forgot to define the variable budget in the main function.
+
+Now, the **main.py** should handle the user's choices for setting a budget or viewing budgets. 
 
  ## Thinking
 

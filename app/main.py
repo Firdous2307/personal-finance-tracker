@@ -40,6 +40,18 @@ def manage_budget(budget, currency_symbol):
         print("3. Back to Main Menu")
         choice = input("Choose an option: ")
 
+
+        if choice == '1':
+            category = input("Enter category: ")
+            amount = float(input("Enter budget amount: "))
+            budget.set_budget(category, amount)
+        elif choice == '2':
+            budget.view_budgets()
+        elif choice == '3':
+            break
+        else:
+            print("Invalid choice. Please try again.")        
+
 def main():
     # Ask user to set currency symbol
     currency_symbol = input("Enter your preferred currency symbol: ")
