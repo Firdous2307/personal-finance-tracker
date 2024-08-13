@@ -163,7 +163,16 @@ I want to try and integrate some AWS Services into the Personal Finance Tracker,
 
 ## Budgeting
 
-The `Budget` class allows me to manage budget categories and amounts. It initializes with an empty dictionary for storing budgets and a currency symbol, defaulting to '$'. This setup enables me to customize the currency symbol for display purposes. Looking good so far
+The `Budget` class allows me to manage budget categories and amounts. It initializes with an empty dictionary for storing budgets and a currency symbol, defaulting to '$'. This setup enables me to customize the currency symbol for display purposes. Looking good so far.
+
+
+### Budget Class Methods
+
+- **`set_budget(category, amount)`**: Sets the budget for a specified category and prints the budget set with the currency symbol.
+
+- **`check_budget(category, spent)`**: Checks if spending exceeds the budget for a category and prints an alert or warning if spending is close to or over the budget.
+
+- **`view_budgets()`**: Displays all budget categories and their amounts with the currency symbol.
 
 
  ## Thinking
