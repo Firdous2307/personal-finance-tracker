@@ -194,6 +194,8 @@ Now, let us work on the alert system to combat overspending.
 
 The `Alerts` class monitors spending and triggers budget alerts. 
 
+The `Alerts` class does not need its own menu in `main.py` because it's integrated into the existing functionality. Alerts are checked when exiting the application, rather than being a separate feature the user interacts with directly.
+
  ## Thinking
 
  - A budget system?? Users should be able to set financial goals and monitor their spending.

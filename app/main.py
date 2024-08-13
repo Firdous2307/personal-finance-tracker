@@ -4,6 +4,8 @@ from transaction import Transaction
 from reports import generate_report
 from config import save_currency_symbol, load_currency_symbol
 from budget import Budget
+from alert import Alerts
+
 
 def main_menu():
     print("\nPersonal Finance Tracker")
@@ -62,6 +64,9 @@ def main():
 
     db = Database()
     budget = Budget()
+    alerts = Alerts(budget) 
+
+
     while True:
         choice = main_menu()
         if choice == '1':
@@ -73,6 +78,10 @@ def main():
         elif choice == '4':
             manage_budget(budget, CURRENCY_SYMBOL)
         elif choice == '5':
+
+            # Check alerts before exiting
+            transactions = db.get_all_transactions()
+            alerts.check_alerts(transactions)
             print("Thank you for using Personal Finance Tracker!")
             sys.exit(0)
         else:
