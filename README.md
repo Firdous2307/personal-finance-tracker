@@ -161,6 +161,7 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
 
 ## Budgeting
 
+The `Budget` class allows me to manage budget categories and amounts. It initializes with an empty dictionary for storing budgets and a currency symbol, defaulting to '$'. This setup enables me to customize the currency symbol for display purposes. Looking good so far
 
 
  ## Thinking
