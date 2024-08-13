@@ -182,7 +182,9 @@ The `manage_budget` function provides an interface for users to manage their bud
 - **View Budgets**: Display all current budgets with the specified currency symbol.
 - **Back to Main Menu**: Exit the budget management interface and return to the main menu
 
+Unfortunately, when i ran the main.py, it showed an error(picture later), now i am thinking why this?. Everything is already in place 
 
+Oh forgot to define the variable budget in the main function
 
  ## Thinking
 

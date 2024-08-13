@@ -49,8 +49,7 @@ def main():
     CURRENCY_SYMBOL = load_currency_symbol()
 
     db = Database()
-    budget = Bud
-
+    budget = Budget()
     while True:
         choice = main_menu()
         if choice == '1':
