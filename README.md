@@ -82,38 +82,27 @@ This file defines the Transaction class, which represents a financial transactio
 ## Using SQLite Command Line Interface
 
 Open your terminal or command prompt and start the SQLite command line tool with:
-```
-bash
+```bash
 sqlite3 finance_tracker.db
 ```
 
 Check Tables:
-
-List all tables in the database with:
-```
-sql
+```sql
 .tables
 ```
-View Table Schema:
 
-Check the schema of the transactions table with:
-```
-sql
+View Table Schema:
+```sql
 .schema transactions
 ```
 
 Query Data:
-
-If you want to view all records from a specific table:
-```
-sql
+```sql
 SELECT * FROM table_name;
 ```
-Exit SQLite:
 
-Exit the SQLite command line tool with:
-```
-sql
+Exit SQLite:
+```sql
 .exit
 ```
 
