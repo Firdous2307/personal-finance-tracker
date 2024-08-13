@@ -148,3 +148,14 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
  
 
  Also, let's allow users to use their preferred currency symbol. I know Dollar is the global currency but lets add more functionalities. 
+
+
+
+ ## All Done
+
+ So currently, if you run the main.py and test it out, it works successfully, but i am thinking of turning the Personal Finance Tracker into a web app, so as to enhance its usability by providing an intuitive interface that's accessible from any device with a browser.
+
+
+ But first off, I want to try and integrate some AWS Services into the Personal Finance Tracker, I love using cloud services and i am sure some will complement this project.
+
+ 
