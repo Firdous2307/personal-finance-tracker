@@ -175,6 +175,15 @@ The `Budget` class allows me to manage budget categories and amounts. It initial
 - **`view_budgets()`**: Displays all budget categories and their amounts with the currency symbol.
 
 
+## Importing Budget into Main
+
+The `manage_budget` function provides an interface for users to manage their budgets. It allows users to:
+- **Set Budget**: Enter a category and amount to set a budget.
+- **View Budgets**: Display all current budgets with the specified currency symbol.
+- **Back to Main Menu**: Exit the budget management interface and return to the main menu
+
+
+
  ## Thinking
 
  - A budget system?? Users should be able to set financial goals and monitor their spending.

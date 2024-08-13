@@ -3,13 +3,15 @@ from database import Database
 from transaction import Transaction
 from reports import generate_report
 from config import save_currency_symbol, load_currency_symbol
+from budget import Budget
 
 def main_menu():
     print("\nPersonal Finance Tracker")
     print("1. Add Transaction")
     print("2. View Transactions")
     print("3. Generate Report")
-    print("4. Exit")
+    print("4. Manage Budget")
+    print("5. Exit")
     return input("Choose an option: ")
 
 def add_transaction(db, currency_symbol):
@@ -30,6 +32,14 @@ def view_transactions(db, currency_symbol):
     for txn in transactions:
         print(f"{txn.date}: {txn.type.capitalize()} - {currency_symbol}{txn.amount:.2f} - {txn.category} - {txn.description}")
 
+def manage_budget(budget, currency_symbol):
+    while True:
+        print("\nBudget Management")
+        print("1. Set Budget")
+        print("2. View Budgets")
+        print("3. Back to Main Menu")
+        choice = input("Choose an option: ")
+
 def main():
     # Ask user to set currency symbol
     currency_symbol = input("Enter your preferred currency symbol: ")
@@ -39,6 +49,7 @@ def main():
     CURRENCY_SYMBOL = load_currency_symbol()
 
     db = Database()
+    budget = Bud
 
     while True:
         choice = main_menu()
@@ -49,6 +60,8 @@ def main():
         elif choice == '3':
             generate_report(db, CURRENCY_SYMBOL)
         elif choice == '4':
+            manage_budget(budget, CURRENCY_SYMBOL)
+        elif choice == '5':
             print("Thank you for using Personal Finance Tracker!")
             sys.exit(0)
         else:
