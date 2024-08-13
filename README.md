@@ -158,4 +158,13 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
 
  But first off, I want to try and integrate some AWS Services into the Personal Finance Tracker, I love using cloud services and i am sure some will complement this project.
 
- 
+
+
+ ## Thinking
+
+ - A budget system?? Users should be able to set financial goals and monitor their spending.
+ - Alert System? Users should be have real-time notifications for overpsending or approaching budget limits.
+ - Export reports to csv formats?? Users would like to analyxe their financial data and share it to maybe loved ones or anyone really.
+ - Data Visualization
+
+ Integrating a budget system allows users to set financial goals and monitor their spending, making it easier to manage finances effectively. An alert system can provide real-time notifications for overspending or approaching budget limits, adding a layer of proactive financial management. Exporting reports to CSV formats enables users to analyze their financial data in other tools or share it easily. Additionally, you might consider adding data visualization features to present financial trends and insights in a more accessible way.
