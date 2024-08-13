@@ -141,3 +141,14 @@ With the ability to add and view transactions, generating reports is important f
 
 
 Currently, looking for a way to streamline the process of aggregating expenses by category.
+
+
+Well, I found a way. In the **generate_report** function, **defaultdict** from the collections module is utilized to streamline the process of aggregating expenses by category.
+
+
+**defaultdict(float)** simplifies the handling of expenses by automatically initializing any new category with a default value of 0.0.
+
+Using **defaultdict**, we can directly update the total amount for each category without additional conditional logic. When adding an expense, defaultdict ensures that the category exists and is initialized to 0.0 if not previously encountered.
+
+
+Good Resource on [How to Use DefaultDict in Python](https://www.freecodecamp.org/news/how-to-use-defaultdict-python/)
