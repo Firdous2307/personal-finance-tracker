@@ -188,6 +188,10 @@ Oh forgot to define the variable budget in the main function.
 
 Now, the **main.py** should handle the user's choices for setting a budget or viewing budgets. 
 
+
+## Alerting
+Now, let us work on the alert system to combat overspending
+
  ## Thinking
 
  - A budget system?? Users should be able to set financial goals and monitor their spending.
