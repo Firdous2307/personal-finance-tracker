@@ -155,8 +155,10 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
 
  So currently, if you run the main.py and test it out, it works successfully, but i am thinking of turning the Personal Finance Tracker into a web app, so as to enhance its usability by providing an intuitive interface that's accessible from any device with a browser.
 
+ **Adding budgeting first**
 
- But first off, I want to try and integrate some AWS Services into the Personal Finance Tracker, I love using cloud services and i am sure some will complement this project.
+
+I want to try and integrate some AWS Services into the Personal Finance Tracker, I love using cloud services and i am sure some will complement this project.
 
 
 ## Budgeting
