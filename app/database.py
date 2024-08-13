@@ -34,5 +34,11 @@ class Database:
         rows = cursor.fetchall()
         return [Transaction(*row[1:5], row[5]) for row in rows]
 
+    def clear_transactions(self):
+        cursor = self.conn.cursor()
+        cursor.execute('DELETE FROM transactions')
+        self.conn.commit()
+        print("All transactions have been deleted.")
+
     def __del__(self):
         self.conn.close()

@@ -12,7 +12,8 @@ def main_menu():
     print("2. View Transactions")
     print("3. Generate Report")
     print("4. Manage Budget")
-    print("5. Exit")
+    print("5. Clear All Transactions")
+    print("6. Exit")
     return input("Choose an option: ")
 
 def add_transaction(db, currency_symbol):
@@ -83,6 +84,9 @@ def main():
         elif choice == '4':
             manage_budget(budget, CURRENCY_SYMBOL)
         elif choice == '5':
+            # Clear all transactions
+            db.clear_transactions()
+        elif choice == '6':
             # Check alerts before exiting
             transactions = db.get_all_transactions()
             alerts.check_alerts(transactions)

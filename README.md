@@ -198,7 +198,10 @@ The `Alerts` class does not need its own menu in `main.py` because it's integrat
 
 Alerts shows when exiting the application, I am so happy and excited, I will upload pictures later.
 
-So as to not make the process of transactions to be clogeled up, i have decided to add a Method to Clear Transactions in Database, Add a Menu Option to Clear Transactions, and 
+So as to not make the process of transactions to be clogeled up, i have decided to add a Method to Clear Transactions in Database, Add a Menu Option to Clear Transactions.
+
+
+Added successfully.
 
  ## Thinking
 
