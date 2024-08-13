@@ -158,4 +158,4 @@ Good Resource on [How to Use DefaultDict in Python](https://www.freecodecamp.org
 Adding a configuration file would be nice so as to prevent hardcoding them into the application, Change configurations without altering the main codebase etc.
  
 
- Also, let's allow users to use their preferred currency symbol. I know Dollar is the global currency but lets add more functionalities 
+ Also, let's allow users to use their preferred currency symbol. I know Dollar is the global currency but lets add more functionalities. 

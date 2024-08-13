@@ -18,7 +18,7 @@ class Database:
                 date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        self.conn.commit()
+        self.conn.commit()    
 
     def add_transaction(self, transaction):
         cursor = self.conn.cursor()
@@ -26,7 +26,7 @@ class Database:
             INSERT INTO transactions (amount, category, description, type)
             VALUES (?, ?, ?, ?)
         ''', (transaction.amount, transaction.category, transaction.description, transaction.type))
-        self.conn.commit()
+        self.conn.commit()    
 
     def get_all_transactions(self):
         cursor = self.conn.cursor()

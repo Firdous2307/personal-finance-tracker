@@ -2,6 +2,7 @@ import sys
 from database import Database
 from transaction import Transaction
 from reports import generate_report
+from config import save_currency_symbol, load_currency_symbol
 
 def main_menu():
     print("\nPersonal Finance Tracker")
@@ -11,32 +12,42 @@ def main_menu():
     print("4. Exit")
     return input("Choose an option: ")
 
-def add_transaction(db):
+def add_transaction(db, currency_symbol):
     amount = float(input("Enter amount: "))
     category = input("Enter category: ")
     description = input("Enter description: ")
     transaction_type = input("Enter type (income/expense): ").lower()
 
+    # Create a Transaction object
     transaction = Transaction(amount, category, description, transaction_type)
+    
+    # Add the transaction to the database
     db.add_transaction(transaction)
-    print("Transaction added successfully!")
+    print(f"Transaction added successfully! {currency_symbol}{amount:.2f}")
 
-def view_transactions(db):
+def view_transactions(db, currency_symbol):
     transactions = db.get_all_transactions()
-    for transaction in transactions:
-        print(transaction)
+    for txn in transactions:
+        print(f"{txn.date}: {txn.type.capitalize()} - {currency_symbol}{txn.amount:.2f} - {txn.category} - {txn.description}")
 
 def main():
+    # Ask user to set currency symbol
+    currency_symbol = input("Enter your preferred currency symbol: ")
+    save_currency_symbol(currency_symbol)
+
+    # Load currency symbol
+    CURRENCY_SYMBOL = load_currency_symbol()
+
     db = Database()
 
     while True:
         choice = main_menu()
         if choice == '1':
-            add_transaction(db)
+            add_transaction(db, CURRENCY_SYMBOL)
         elif choice == '2':
-            view_transactions(db)
+            view_transactions(db, CURRENCY_SYMBOL)
         elif choice == '3':
-            generate_report(db)
+            generate_report(db, CURRENCY_SYMBOL)
         elif choice == '4':
             print("Thank you for using Personal Finance Tracker!")
             sys.exit(0)
