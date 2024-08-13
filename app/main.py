@@ -6,7 +6,6 @@ from config import save_currency_symbol, load_currency_symbol
 from budget import Budget
 from alert import Alerts
 
-
 def main_menu():
     print("\nPersonal Finance Tracker")
     print("1. Add Transaction")
@@ -42,7 +41,6 @@ def manage_budget(budget, currency_symbol):
         print("3. Back to Main Menu")
         choice = input("Choose an option: ")
 
-
         if choice == '1':
             category = input("Enter category: ")
             amount = float(input("Enter budget amount: "))
@@ -63,9 +61,16 @@ def main():
     CURRENCY_SYMBOL = load_currency_symbol()
 
     db = Database()
-    budget = Budget()
+    budget = Budget(CURRENCY_SYMBOL)
     alerts = Alerts(budget) 
 
+    # Set up sample budgets
+    budget.set_budget('Food', 100.00)
+    budget.set_budget('Entertainment', 50.00)
+
+    # Add sample transactions
+    db.add_transaction(Transaction(120.00, 'Food', 'Groceries', 'expense'))
+    db.add_transaction(Transaction(30.00, 'Entertainment', 'Movie', 'expense'))
 
     while True:
         choice = main_menu()
@@ -78,7 +83,6 @@ def main():
         elif choice == '4':
             manage_budget(budget, CURRENCY_SYMBOL)
         elif choice == '5':
-
             # Check alerts before exiting
             transactions = db.get_all_transactions()
             alerts.check_alerts(transactions)
