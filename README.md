@@ -190,7 +190,9 @@ Now, the **main.py** should handle the user's choices for setting a budget or vi
 
 
 ## Alerting
-Now, let us work on the alert system to combat overspending
+Now, let us work on the alert system to combat overspending.
+
+The `Alerts` class monitors spending and triggers budget alerts. 
 
  ## Thinking
 
