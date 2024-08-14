@@ -65,13 +65,6 @@ def main():
     budget = Budget(CURRENCY_SYMBOL)
     alerts = Alerts(budget) 
 
-    # Set up sample budgets
-    budget.set_budget('Food', 100.00)
-    budget.set_budget('Entertainment', 50.00)
-
-    # Add sample transactions
-    db.add_transaction(Transaction(120.00, 'Food', 'Groceries', 'expense'))
-    db.add_transaction(Transaction(30.00, 'Entertainment', 'Movie', 'expense'))
 
     while True:
         choice = main_menu()

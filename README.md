@@ -203,6 +203,21 @@ So as to not make the process of transactions to be clogeled up, i have decided 
 
 Added successfully.
 
+## Running the Tests
+
+**Standalone Testing**: Run the test files (test_budget.py and test_alerts.py) independently to verify the functionality.
+
+**Integrated Testing**: Run main.py and perform transactions to see how the budgets and alerts behave in a real use case.
+
+
+I initially rushed into integrating the components without conducting standalone testing first, which isn't the best practice. I realize now that performing standalone tests before integration is crucial for ensuring each component functions correctly on its own.
+
+**sys.path.insert:**
+
+This line adds the app directory to the sys.path, allowing the script to find and import alert.py, budget.py, and transaction.py from the app directory.
+
+
+
  ## Thinking
 
  - A budget system?? Users should be able to set financial goals and monitor their spending.
