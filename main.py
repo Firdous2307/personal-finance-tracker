@@ -5,10 +5,11 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'app'
 from app.database import Database
 from app.transaction import Transaction
 from app.report import generate_report
-from config import save_currency_symbol, load_currency_symbol
+from app.config import save_currency_symbol, load_currency_symbol
 from app.budget import Budget
 from app.alert import Alerts
 from export import export_report_to_csv
+from sns.aws_sns import SNSNotifier
 
 
 
@@ -23,7 +24,7 @@ def main_menu():
     print("7. Exit")
     return input("Choose an option: ")
 
-def add_transaction(db, currency_symbol):
+def add_transaction(db, currency_symbol, alerts):
     amount = float(input("Enter amount: "))
     category = input("Enter category: ")
     description = input("Enter description: ")
@@ -35,6 +36,10 @@ def add_transaction(db, currency_symbol):
     # Add the transaction to the database
     db.add_transaction(transaction)
     print(f"Transaction added successfully! {currency_symbol}{amount:.2f}")
+
+    # Check alerts after adding the transaction
+    transactions = db.get_all_transactions()
+    alerts.check_alerts(transactions)
 
 def view_transactions(db, currency_symbol):
     transactions = db.get_all_transactions()
@@ -72,11 +77,14 @@ def main():
     budget = Budget(CURRENCY_SYMBOL)
     alerts = Alerts(budget) 
 
+    # Set up the SNS notifier
+    alerts.notifier.setup()
+
 
     while True:
         choice = main_menu()
         if choice == '1':
-            add_transaction(db, CURRENCY_SYMBOL)
+            add_transaction(db, CURRENCY_SYMBOL,alerts)
         elif choice == '2':
             view_transactions(db, CURRENCY_SYMBOL)
         elif choice == '3':

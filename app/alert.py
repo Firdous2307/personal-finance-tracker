@@ -1,5 +1,5 @@
 from budget import Budget
-from aws_sns import SNSNotifier
+from sns.aws_sns import SNSNotifier
 from collections import defaultdict
 
 class Alerts:

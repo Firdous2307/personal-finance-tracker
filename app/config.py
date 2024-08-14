@@ -19,8 +19,10 @@ def load_config():
     except FileNotFoundError:
         return {'CURRENCY_SYMBOL': '$', 'AWS_SNS_TOPIC_ARN': ''}
 
+def load_currency_symbol():
+    config = load_config()
+    return config.get('CURRENCY_SYMBOL', '$')
 
-config = load_config()
-
-CURRENCY_SYMBOL = config.get('CURRENCY_SYMBOL', '$')
-AWS_SNS_TOPIC_ARN = config.get('AWS_SNS_TOPIC_ARN', '')
+def load_aws_sns_topic_arn():
+    config = load_config()
+    return config.get('AWS_SNS_TOPIC_ARN', '')

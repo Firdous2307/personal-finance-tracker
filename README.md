@@ -253,4 +253,32 @@ The `SNSNotifier` class initializes an SNS resource using boto3 and provides a m
 [How it works](https://docs.aws.amazon.com/sns/latest/dg/sns-how-it-works.html)
 
 
-## Creating AWS SNS TOPIC
+The alert system is set up to send emails when the budget is exceeded or close to being exceeded.
+
+
+
+## Note
+
+A few points to consider:
+
+**Alert Timing:** In the current setup, the alerts are only checked when the user chooses to exit the program (option 7 in the main menu). This means that even if a transaction causes the budget to be exceeded, the alert won't be sent until the user exits the program.
+
+Remember that when you first subscribe an email to an SNS topic, AWS sends a confirmation email. The subscription must be confirmed before any alerts will be received.
+
+
+Check alerts after each transaction is added:
+
+In the `add_transaction` function, after adding the transaction to the database, 
+
+```python
+alerts.check_alerts(db.get_all_transactions())
+```
+
+Initialize the SNSNotifier in the main function:
+```python
+alerts.notifier.setup()
+```
+This ensures the SNS topic is created and the email is subscribed.
+
+
+This setup will send an alert email (if conditions are met) right after a transaction is added, rather than waiting until the program exits.
