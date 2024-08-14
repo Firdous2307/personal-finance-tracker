@@ -1,5 +1,5 @@
 import csv
-from reports import generate_report
+from report import generate_report
 
 def export_report_to_csv(db, currency_symbol, filename='financial_report.csv'):
     # Pass both db and currency_symbol to generate_report

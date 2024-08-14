@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'app'
 
 from app.database import Database
 from app.transaction import Transaction
-from app.reports import generate_report
+from app.report import generate_report
 from config import save_currency_symbol, load_currency_symbol
 from app.budget import Budget
 from app.alert import Alerts
