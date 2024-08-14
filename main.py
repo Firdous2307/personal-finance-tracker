@@ -1,10 +1,14 @@
 import sys
-from database import Database
-from transaction import Transaction
-from reports import generate_report
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'app')))
+
+from app.database import Database
+from app.transaction import Transaction
+from app.reports import generate_report
 from config import save_currency_symbol, load_currency_symbol
-from budget import Budget
-from alert import Alerts
+from app.budget import Budget
+from app.alert import Alerts
+
 
 def main_menu():
     print("\nPersonal Finance Tracker")

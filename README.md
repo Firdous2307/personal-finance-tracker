@@ -218,6 +218,8 @@ This line adds the app directory to the sys.path, allowing the script to find an
 
 
 
+Next Up, turning the personal finance tracker to a web app
+
  ## Thinking
 
  - A budget system?? Users should be able to set financial goals and monitor their spending.
