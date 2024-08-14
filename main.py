@@ -8,6 +8,8 @@ from app.reports import generate_report
 from config import save_currency_symbol, load_currency_symbol
 from app.budget import Budget
 from app.alert import Alerts
+from export import export_report_to_csv
+
 
 
 def main_menu():
@@ -17,7 +19,8 @@ def main_menu():
     print("3. Generate Report")
     print("4. Manage Budget")
     print("5. Clear All Transactions")
-    print("6. Exit")
+    print("6. Export Report to CSV")  # New option
+    print("7. Exit")
     return input("Choose an option: ")
 
 def add_transaction(db, currency_symbol):
@@ -84,6 +87,8 @@ def main():
             # Clear all transactions
             db.clear_transactions()
         elif choice == '6':
+            export_report_to_csv(db, CURRENCY_SYMBOL)
+        elif choice == '7':
             # Check alerts before exiting
             transactions = db.get_all_transactions()
             alerts.check_alerts(transactions)

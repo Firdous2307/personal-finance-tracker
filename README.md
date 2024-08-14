@@ -216,7 +216,9 @@ I initially rushed into integrating the components without conducting standalone
 
 This line adds the app directory to the sys.path, allowing the script to find and import alert.py, budget.py, and transaction.py from the app directory.
 
+## CSV Report Export
 
+The **export_report_to_csv** function allows users to export their financial data from the Personal Finance Tracker into a CSV file. This feature enhances the usability and accessibility of the data by providing a portable, widely compatible format that can be used across different platforms and applications.
 
 Next Up, turning the personal finance tracker to a web app
 
@@ -225,6 +227,8 @@ Next Up, turning the personal finance tracker to a web app
  - A budget system?? Users should be able to set financial goals and monitor their spending.
  - Alert System? Users should be have real-time notifications for overpsending or approaching budget limits.
  - Export reports to csv formats?? Users would like to analyxe their financial data and share it to maybe loved ones or anyone really.
+
+
  - Data Visualization
 
  Integrating a budget system allows users to set financial goals and monitor their spending, making it easier to manage finances effectively. An alert system can provide real-time notifications for overspending or approaching budget limits, adding a layer of proactive financial management. Exporting reports to CSV formats enables users to analyze their financial data in other tools or share it easily. Additionally, you might consider adding data visualization features to present financial trends and insights in a more accessible way.
