@@ -155,10 +155,6 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
 
  So currently, if you run the main.py and test it out, it works successfully, but i am thinking of turning the Personal Finance Tracker into a web app, so as to enhance its usability by providing an intuitive interface that's accessible from any device with a browser.
 
- **Adding budgeting first**
-
-
-I want to try and integrate some AWS Services into the Personal Finance Tracker, I love using cloud services and i am sure some will complement this project.
 
 
 ## Budgeting
@@ -220,13 +216,30 @@ This line adds the app directory to the sys.path, allowing the script to find an
 
 The **export_report_to_csv** function allows users to export their financial data from the Personal Finance Tracker into a CSV file. This feature enhances the usability and accessibility of the data by providing a portable, widely compatible format that can be used across different platforms and applications.
 
-Next Up, turning the personal finance tracker to a web app
 
- ## Thinking
+## Time to add Cloud Services
 
- - A budget system?? Users should be able to set financial goals and monitor their spending.
- - Alert System? Users should be have real-time notifications for overpsending or approaching budget limits.
- - Export reports to csv formats?? Users would like to analyxe their financial data and share it to maybe loved ones or anyone really.
+I want to integrate AWS services into the Personal Finance Tracker because I enjoy using cloud services and believe scalable features will be beneficial.
+
+
+## Using AWS SDK
+
+The AWS SDK provides:
+
+- **API Documentation**: Detailed references and guides for all AWS services, helping you understand how to interact with them programmatically.
+- **Code Samples**: Example code snippets in various programming languages to illustrate how to use AWS services effectively.
+- **Documentation**: Comprehensive guides, tutorials, and best practices for setting up, configuring, and optimizing AWS services.
+
+These resources make it easier to integrate AWS services into your applications, streamline development, and troubleshoot issues.
+
+
+## AWS SNS
+
+To integrate AWS services into the personal finance tracker for receiving alerts, we can use AWS Simple Notification Service (SNS). AWS SNS allows you to send notifications (e.g., email, SMS) when certain conditions are met, like exceeding a budget in your finance tracker.
+
+[What is Amazon SNS?](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+[Get started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html)
+[How it works](https://docs.aws.amazon.com/sns/latest/dg/sns-how-it-works.html)
 
 
  - Data Visualization
