@@ -246,8 +246,6 @@ messages](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/examp
 
 The `SNSNotifier` class initializes an SNS resource using boto3 and provides a method to create an SNS topic with a default name of `BudgetAlerts`. It includes error handling with logging to track the creation process and catch any issues.
 
-
-
 [What is Amazon SNS?](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
 
 [Get started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html)
@@ -255,9 +253,4 @@ The `SNSNotifier` class initializes an SNS resource using boto3 and provides a m
 [How it works](https://docs.aws.amazon.com/sns/latest/dg/sns-how-it-works.html)
 
 
-
-
-
- - Data Visualization
-
- Integrating a budget system allows users to set financial goals and monitor their spending, making it easier to manage finances effectively. An alert system can provide real-time notifications for overspending or approaching budget limits, adding a layer of proactive financial management. Exporting reports to CSV formats enables users to analyze their financial data in other tools or share it easily. Additionally, you might consider adding data visualization features to present financial trends and insights in a more accessible way.
+## Creating AWS SNS TOPIC

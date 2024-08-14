@@ -17,3 +17,4 @@ def load_currency_symbol():
     except FileNotFoundError:
         return '$'
 
+AWS_SNS_TOPIC_ARN="$AWS_SNS_TOPIC_ARN"
