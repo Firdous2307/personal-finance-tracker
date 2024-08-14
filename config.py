@@ -16,3 +16,4 @@ def load_currency_symbol():
             return config.get('CURRENCY_SYMBOL', '$')
     except FileNotFoundError:
         return '$'
+
