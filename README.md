@@ -237,9 +237,25 @@ These resources make it easier to integrate AWS services into your applications,
 
 To integrate AWS services into the personal finance tracker for receiving alerts, we can use AWS Simple Notification Service (SNS). AWS SNS allows you to send notifications (e.g., email, SMS) when certain conditions are met, like exceeding a budget in your finance tracker.
 
+
+Really good code snippets here, Kudos to the AWS SDK Community;
+
+[Shows how to use the AWS SDK for Python (Boto3) with Amazon Simple Notification
+Service (Amazon SNS) to create notification topics, add subscribers, and publish
+messages](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/example_code/sns/sns_basics.py#L33)
+
+The `SNSNotifier` class initializes an SNS resource using boto3 and provides a method to create an SNS topic with a default name of `BudgetAlerts`. It includes error handling with logging to track the creation process and catch any issues.
+
+
+
 [What is Amazon SNS?](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+
 [Get started with Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html)
+
 [How it works](https://docs.aws.amazon.com/sns/latest/dg/sns-how-it-works.html)
+
+
+
 
 
  - Data Visualization
