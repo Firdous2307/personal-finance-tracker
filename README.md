@@ -41,8 +41,6 @@ Although the language used was in JavaScript, the principle still remains the sa
 
 ## SQL Lite
 
-
-
 Using an SQLite database for this project is advantageous because:
 
 **Simplicity**: SQLite is lightweight and easy to set up, making it ideal for small to medium-sized projects without the need for complex database configurations.
@@ -148,13 +146,6 @@ Adding a configuration file would be nice so as to prevent hardcoding them into 
  
 
  Also, let's allow users to use their preferred currency symbol. I know Dollar is the global currency but lets add more functionalities. 
-
-
-
- ## All Done
-
- So currently, if you run the main.py and test it out, it works successfully, but i am thinking of turning the Personal Finance Tracker into a web app, so as to enhance its usability by providing an intuitive interface that's accessible from any device with a browser.
-
 
 
 ## Budgeting
@@ -282,3 +273,10 @@ This ensures the SNS topic is created and the email is subscribed.
 
 
 This setup will send an alert email (if conditions are met) right after a transaction is added, rather than waiting until the program exits.
+
+
+ ## All Done
+
+ So currently, if you run the main.py and test it out, it works successfully, but i am thinking of turning the Personal Finance Tracker into a web app, so as to enhance its usability by providing an intuitive interface that's accessible from any device with a browser.
+
+ 
