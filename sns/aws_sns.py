@@ -2,20 +2,26 @@ import sys
 import os
 import logging
 import boto3
+# For Local Use
 from botocore.exceptions import ClientError
+# for AWS Credentials, Uncomment for Use
+#from botocore.exceptions import NoCredentialsError, PartialCredentialsError
+
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app.config import load_aws_sns_topic_arn
 
 class SNSManager:
-    def __init__(self, use_sns=True):
+       #def __init__(self):   # For AWS Credentials, uncomment for use
+
+    def __init__(self, use_sns=True): # For Local Use
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.INFO)
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         self.logger.addHandler(handler)
 
-        if use_sns:
+        if use_sns: # Comment if you want to use AWS Credentials
             try:
                 self.sns_client = boto3.client('sns')
                 self.sns_resource = boto3.resource('sns')
