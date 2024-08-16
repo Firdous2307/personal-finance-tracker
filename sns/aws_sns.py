@@ -69,12 +69,12 @@ class SNSNotifier:
     def __init__(self):
         self.manager = SNSManager()
     
-    def setup(self):
+    def setup(self, email):
         try:
             topic = self.manager.create_topic()
-            self.manager.subscribe(topic, 'email', 'ayomilekanaraoye@gmail.com')
+            self.manager.subscribe(topic, 'email', email)
             print("SNS topic setup complete.")
-            print("Subscribed email ayomilekanaraoye@gmail.com to SNS Topic.")
+            print(f"Subscribed {email} to SNS Topic.")
         except Exception as e:
             print(f"Error during SNS setup: {e}")
 

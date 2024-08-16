@@ -79,10 +79,17 @@ def main():
 
     use_sns = input("Do you want to enable AWS SNS alerts? (yes/no): ").strip().lower() == 'yes'
     sns_notifier = SNSNotifier() if use_sns else None
-    
-    # Set up the SNS notifier
-    if sns_notifier:
-        sns_notifier.setup()
+
+    # Ask for the user's email
+    email = input("Enter your email address to receive notifications: ")
+
+    if use_sns:
+        # Request user's email for SNS notifications
+        email = input("Enter your email address to receive notifications: ")
+        sns_notifier = SNSNotifier()
+        sns_notifier.setup(email)
+    else:
+        sns_notifier = None
 
     while True:
         choice = main_menu()
