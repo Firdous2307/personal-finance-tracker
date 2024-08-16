@@ -77,9 +77,12 @@ def main():
     budget = Budget(CURRENCY_SYMBOL)
     alerts = Alerts(budget) 
 
+    use_sns = input("Do you want to enable AWS SNS alerts? (yes/no): ").strip().lower() == 'yes'
+    sns_notifier = SNSNotifier() if use_sns else None
+    
     # Set up the SNS notifier
-    alerts.notifier.setup()
-
+    if sns_notifier:
+        sns_notifier.setup()
 
     while True:
         choice = main_menu()

@@ -91,6 +91,4 @@ def main():
     # Rest of the code...
     if sns_notifier:
         sns_notifier.setup()
-    
-    # Other code...
 ```

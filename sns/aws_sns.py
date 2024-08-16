@@ -8,16 +8,27 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from app.config import load_aws_sns_topic_arn
 
 class SNSManager:
-    def __init__(self):
+    def __init__(self, use_sns=True):
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.INFO)
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         self.logger.addHandler(handler)
 
-        self.sns_client = boto3.client('sns')
-        self.sns_resource = boto3.resource('sns')
-        self.topic_arn = load_aws_sns_topic_arn()
+        if use_sns:
+            try:
+                self.sns_client = boto3.client('sns')
+                self.sns_resource = boto3.resource('sns')
+                self.topic_arn = load_aws_sns_topic_arn()
+            except (NoCredentialsError, PartialCredentialsError) as e:
+                self.logger.error("AWS credentials are not configured properly: %s", e)
+                raise
+        else:
+            self.logger.info("Running in local mode, SNS features disabled.")
+            self.sns_client = None
+            self.sns_resource = None
+            self.topic_arn = None
+
     
     def create_topic(self, name='BudgetAlerts'):
         try:
